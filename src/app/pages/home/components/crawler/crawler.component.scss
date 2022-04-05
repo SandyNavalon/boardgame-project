@@ -1,0 +1,111 @@
+.boardgame-page{
+  height: 100vh;
+}
+
+.title{
+  margin: 100px 0 80px 0;
+  display: flex;
+  justify-content: center;
+  align-content: center;
+  flex-flow: column wrap;
+  font-size: 40px;
+
+  &-icons{
+    display: flex;
+    align-content: center;
+    justify-content: space-between;
+
+  }
+}
+
+.boardgamelist{
+  padding: 4em;
+  display: grid;
+  grid-template: repeat(6, 100vw);
+  grid-gap: 80px;
+  justify-content: left;
+
+  &__box{
+    display: flex;
+    align-content: space-between;
+    flex-direction: row ;
+  }
+
+  &__item{
+
+    &-img{
+      width: 250px;
+      height: 300px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+
+      img{
+        max-width: 250px;
+        max-height: 250px;
+        display: flex;
+        align-content: center;
+        justify-content: center;
+      }
+    }
+
+    &-name{
+      margin-top: 4px;
+    }
+
+    &-info{
+
+      &-year{
+        font-style: italic;
+      }
+
+      button{
+        border-radius: 5px;
+
+        a {
+          text-decoration: none;
+          color: black;
+        }
+      }
+    }
+  }
+
+  &__description{
+    margin-top: 50px;
+    margin-left: 20px;
+    padding: 1em;
+
+    &-text{
+      display: flex;
+      justify-content: center;
+      align-content: center;
+
+
+      p{
+        display: flex;
+        justify-content: center;
+        align-content: center;
+        text-align: justify;
+      }
+    }
+  }
+
+  .additionalInfo{
+    display: flex;
+    flex-direction: row;
+    justify-content:space-around;
+    align-items: center;
+    margin-top: 20px;
+
+
+    h4{
+      text-align: center;
+    }
+
+    img{
+      width: 40px;
+      height: 40px;
+
+    }
+  }
+  }

@@ -1,0 +1,31 @@
+<div class="container">
+  <form [formGroup]="contactForm" (ngSubmit)="onSubmit()">
+    <div class="form">
+      <h2>Contact us!</h2>
+
+  <!-- las labels tienen que asociarse siempre con los inputs, o bien mediante for e id o envolviendo el input-->
+      <fieldset>
+        <label for='name'>Name </label>
+        <input placeholder='myname' formControlName="name" type="text">
+        <span *ngIf="submitted && contactForm.get('name')?.errors">Name is required and must have 2 characters minimum</span>
+      </fieldset>
+
+      <fieldset>
+        <label>Email</label>
+        <input placeholder="myemail@gmail.com"formControlName="email" type="email">
+        <span *ngIf="submitted && contactForm.get('email')?.errors"></span>
+      </fieldset>
+
+      <fieldset class="description">
+        <label for="description">Description </label>
+        <textarea placeholder=" 200 characters max." id="description" formControlName= "description" type="text"></textarea>
+        <span *ngIf="submitted && contactForm.get('description')?.errors"></span>
+      </fieldset>
+      <button type="submit">Send</button>
+
+    </div>
+
+  <!-- si solo hay un boton lo enlaza directamente con onSubmit-->
+
+  </form>
+</div>

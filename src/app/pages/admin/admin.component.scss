@@ -1,0 +1,80 @@
+.container{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  align-content: space-between;
+  height: 100vh;
+  color: black;
+  font-family: 'Archivo', sans-serif;
+  font-family: 'Genos', sans-serif;
+  font-family: 'Quattrocento Sans', sans-serif;
+}
+
+
+.form{
+  background-color: aliceblue;
+  border-radius: 5px;
+  border: 5px solid black;
+
+  width: 1100px ;
+  height: 400px;
+
+  display:flex;
+  flex-flow: row wrap;
+  justify-content: space-around;
+  align-content: center;
+
+  -webkit-box-shadow: 5px 5px 0px 1px #000000;
+  box-shadow: 5px 5px 0px 1px #000000;
+
+
+
+  &__register{
+
+
+    &-fieldset{
+      max-width: 200px;
+    }
+
+    &-input{
+      display: flex;
+      justify-content: left;
+    }
+
+  }
+
+  &__login{
+
+
+    &-fieldset{
+      max-width: 200px;
+    }
+
+    &-input{
+      display: flex;
+      justify-content: left;
+    }
+
+  }
+}
+
+button{
+  margin-top: 5px;
+  border: none;
+  outline: none;
+  padding: 10px;
+
+  color: rgba(0, 0, 0, 0.905);
+  font-weight: 600;
+
+  transition-duration: 0.3s;
+  cursor: pointer;
+
+    &:hover{
+      color: rgb(0, 0, 0) ;
+      background-color:rgb(248, 250, 151);
+
+      border-radius: 20px;
+    }
+}
+

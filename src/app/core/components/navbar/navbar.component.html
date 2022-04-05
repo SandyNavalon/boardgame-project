@@ -1,0 +1,35 @@
+
+<nav class="navbar">
+    <!-- <div class="container"> -->
+
+      <button class="navbar__toggle">
+        <fa-icon [icon]="fabars"></fa-icon>
+      </button>
+
+    <!-- LOGO -->
+      <div class="navbar__logo" src="" alt="logo">
+        <a href="http://localhost:4200/home">
+          <img class="navbar__logo-img" src="/assets/logo/logo-1.gif" alt="logo">
+        </a>
+      </div>
+      <!-- MENU LIST -->
+      <div class="navbar__anchor-list">
+        <div class="navbar__anchor-list-item" *ngFor="let item of menuList">
+          <a [routerLink]="item.url">{{item.label}}</a>
+        </div>
+
+      <!-- ICONS -->
+      </div>
+      <div class="navbar__anchor-icon">
+        <div>
+          <a href="http://localhost:4200/wishlist">
+            <img src="/assets/icons/navbar/lista-de-deseos.png" alt="email">
+            </a>
+          <a href="http://localhost:4200/contact">
+            <img src="/assets/icons/navbar/email.png" alt="">
+          </a>
+        </div>
+      </div>
+  <!-- </div> -->
+</nav>
+

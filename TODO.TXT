@@ -1,0 +1,17 @@
+--TYPESCRIPT--
+
+LOGIN/LOGOUT
+
+NEWSLETTER en la home
+
+
+--SCSS--
+NAVBAR & FOOTER
+- responsive
+
+CONTENT
+- responsive
+
+REVISAR ESTILOS Y MEJORAR
+
+SIMPLIFICAR CÓDIGO

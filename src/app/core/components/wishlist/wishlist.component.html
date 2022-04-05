@@ -1,0 +1,18 @@
+<div class="container">
+
+  <div class="list">
+    <div class="list__son">
+      <app-wishlist-son (newItemEvent)="addItem($event)">
+      </app-wishlist-son>
+    </div>
+
+    <h3 class="list__title">MY BOARDGAME LIST</h3>
+
+    <div class="list__father">
+      <ul>
+        <li *ngFor="let item of items">{{item | uppercase }}</li>
+      </ul>
+    </div>
+  </div>
+
+</div>

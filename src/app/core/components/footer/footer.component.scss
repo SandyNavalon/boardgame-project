@@ -1,0 +1,36 @@
+.container{
+  display: flex;
+  flex-direction: row;
+}
+
+.footer{
+  display: flex;
+  align-items: flex-end;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  width: 100%;
+  min-height: 80px;
+  height: 60px;
+  padding: 0px;
+  position: fixed;
+  justify-content: right;
+
+  background-color: #EDEDED;
+  border-top: 5px solid black;
+
+
+  &__anchor-list {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    flex-direction:row;
+
+    &-item img {
+      margin: 0 20px;
+      width: 40px;
+    }
+
+  }
+}

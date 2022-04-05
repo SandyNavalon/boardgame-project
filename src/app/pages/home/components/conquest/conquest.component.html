@@ -1,0 +1,62 @@
+<div class="boardgames-page">
+
+  <div class="title">
+    <h1 class="title">CONQUER TERRITORIES WITH YOUR BEST TACTICS</h1>
+    <div class="title-icons">
+      <fa-icon class="title-icon" [icon]="famoney"></fa-icon>
+      <fa-icon class="title-icon" [icon]="faglobe"></fa-icon>
+    </div>
+  </div>
+
+  <div *ngIf="boardgameListConquest" class="boardgamelist">
+    <ng-container *ngFor="let item of boardgameListConquest">
+      <div class="boardgamelist__box">
+        <div class="boardgamelist__item">
+
+          <div class="boardgamelist__item-img">
+            <img [src]="item.thumb_url" alt="boardgame image">
+          </div>
+
+          <div class="boardgamelist__item-name">
+            <h2>{{item.name}}</h2>
+          </div>
+
+          <div class="boardgamelist__item-info">
+            <div class="boardgamelist__item-price" *ngIf="item.price > 0">
+              <h3>Price: {{item.price}} euros aprox.</h3>
+            </div>
+
+            <button class="boardgamelist__item-button" >
+              <fa-icon class="icon" [icon]="faheart"></fa-icon>
+            </button>
+          </div>
+
+        </div>
+        <div class="boardgamelist__description">
+          <div class="boardgamelist__description-text">
+            <p>{{item.description_preview}}</p>
+          </div>
+          <div class="additionalInfo">
+            <div class="boardgamelist__description-players">
+              <img src="/assets/icons/item/team.png" alt="">
+              <h4> {{item.min_players}} - {{item.max_players}}</h4>
+            </div>
+            <div class="boardgamelist__description-playtime">
+              <img src="/assets/icons/item/hora.png" alt="">
+              <h4>{{item.min_playtime}} - {{item.max_playtime}}</h4>
+            </div>
+            <div class="boardgamelist__description-age">
+              <img src="/assets/icons/item/age.png" alt="">
+              <h4>+{{item.min_age}}</h4>
+            </div>
+          </div>
+        </div>
+    </div>
+
+      </ng-container>
+
+    </div>
+
+  </div>
+
+

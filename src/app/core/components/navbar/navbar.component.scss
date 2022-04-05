@@ -1,0 +1,183 @@
+.navbar{
+  background-color: #EDEDED;
+  border-bottom:5px solid black;
+
+  width: 100%;
+  height: 60px;
+  min-height: 80px;
+  padding: 1em;
+
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 4;
+
+  display: flex;
+  justify-content:space-around;
+  flex-flow: row wrap;
+
+  /* .container{
+    /* padding: 1em;
+    display: grid;
+    grid-template: repeat(1, 1fr) / repeat(6, 1fr);
+    grid-template-areas: "logo menuitem icon x y z";
+    grid-gap: 20px; */
+
+
+
+  &__logo{
+    display: flex;
+    justify-content: center;
+
+    &-img{
+    width: 250px;
+    }
+  }
+
+  &__toggle{
+    border: none;
+    font-size: 20px;
+    padding: 0 20px;
+    line-height: 60px;
+
+    display: none;
+  }
+
+  &__anchor-list{
+/*  margin-left: 50px;*/
+    display:flex;
+    justify-content: center;
+    align-content: center;
+    flex-flow: row;
+
+
+    &-item a {
+      margin-right: 50px;
+      font-size: 20px;
+      text-decoration: none;
+      color: black;
+      font-family:roboto;
+      font-weight: lighter;
+
+
+      cursor: pointer;
+
+      &:hover{
+        background-color: rgb(231, 231, 184);
+        border-radius: 5px;
+
+      }
+
+
+    }
+  }
+
+  &__anchor-icon {
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    flex-flow: row wrap;
+
+    img{
+    width: 45px;
+    margin-left: 30px;
+
+    }
+
+  }
+}
+
+@media (max-width: 800px) {
+  .navbar{
+    background-color: brown;
+    width: 100%;
+    height: 60px;
+    min-height: 60px;
+    padding: 1em;
+
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 4;
+
+    display: flex;
+    flex-direction: column;
+
+      &__logo{
+        display: flex;
+        align-content: center;
+
+      &-img{
+      width: 150px;
+
+      }
+    }
+
+    &__toggle{
+      border: none;
+      background: none;
+      font-size: 20px;
+      padding: 0 20px;
+      line-height: 60px;
+
+      display: block;
+    }
+
+    &__anchor-list{
+      display:flex;
+      flex-direction: column;
+      position: fixed;
+      left: 0;
+      margin-top: 300px;
+      width: 100%;
+
+      background-color: cadetblue;
+      border: black;
+      border-style:solid;
+      border-width: 2px;
+      border-top: none;
+
+      height: calc(100% - 360px);
+      overflow-y: auto;
+
+      &-item{
+        margin-left: 10px;
+        margin-top: 20px;
+        margin-bottom: 20px;
+
+        font-size: 15px;
+        text-decoration: none;
+        color: black;
+        font-family:roboto;
+        font-weight: lighter;
+        text-align: center;
+
+
+        cursor: pointer;
+
+        &:hover{
+          background-color: rgb(231, 231, 184);
+          border-radius: 5px;
+
+        }
+
+
+      }
+    }
+
+    &__anchor-icon {
+      display: flex;
+      justify-content: center;
+      align-content: center;
+
+      img{
+      width: 30px;
+      margin-left: 30px;
+
+      }
+
+    }
+  }
+
+}
+

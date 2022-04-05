@@ -1,0 +1,73 @@
+<div class="boardgames-page">
+
+  <!-- <app-loader></app-loader> -->
+<div class="finder">
+  <h1>SEARCH FOR A BOARDGAME</h1>
+  <app-boardgames-finder
+  (sendName)="handleSearch($event)"></app-boardgames-finder>
+</div>
+
+    <!-- LISTADO finder -->
+  <!-- <h3 *ngIf="count">{{count}}</h3> -->
+  <div *ngIf="boardgameFound" class="boardgamelist">
+    <ng-container *ngFor="let item of boardgameFound?.games">
+      <div class="boardgamelist__box">
+        <div class="boardgamelist__item">
+
+          <div class="boardgamelist__item-img" *ngIf="item.thumb_url">
+            <img [src]="item.thumb_url" alt="boardgame image">
+          </div>
+
+          <div class="boardgamelist__item-name">
+            <h2>{{item.name}}</h2>
+          </div>
+
+          <div class="boardgamelist__item-info">
+            <div class="boardgamelist__item-price" *ngIf="item.price > 0">
+              <h3>Price:</h3><h2>{{item.price}} euros aprox.</h2>
+            </div>
+            <div class="boardgamelist__item-price" *ngIf="item.price <= 0">
+              <h3>Price is not available</h3>
+            </div>
+
+            <!-- <div class="boardgamelist__item-bottom">
+              <h5>Year: {{item.year_published}}</h5>
+            </div> -->
+
+            <button class="boardgamelist__item-button" >
+              <fa-icon class="icon" [icon]="faheart"></fa-icon>
+            </button>
+          </div>
+
+        </div>
+        <div class="boardgamelist__description">
+          <div class="boardgamelist__description-text">
+            <p>{{item.description_preview}}</p>
+          </div>
+          <div class="additionalInfo">
+            <div class="boardgamelist__description-players" *ngIf="item.max_players">
+              <img src="/assets/icons/item/team.png" alt="">
+              <h4> {{item.min_players}} - {{item.max_players}}</h4>
+            </div>
+            <div class="boardgamelist__description-playtime" *ngIf="item.min_playtime">
+              <img src="/assets/icons/item/hora.png" alt="">
+              <h4>{{item.min_playtime}} - {{item.max_playtime}}</h4>
+            </div>
+            <div class="boardgamelist__description-age" *ngIf="item.min_age">
+              <img src="/assets/icons/item/age.png" alt="">
+              <h4>+{{item.min_age}}</h4>
+            </div>
+          </div>
+        </div>
+      </div>
+
+    </ng-container>
+    </div>
+
+    <!-- <div *ngIf="!boardgameFound">
+    </div> -->
+
+  </div>
+
+
+

@@ -1,0 +1,10 @@
+
+<div class="container">
+
+  <label for="item-input">Add a boardgame to your list: </label>
+  <input class="input" type="text" id="item-input" #newItem>
+  <button class="button"  (click)="addNewItem(newItem.value)">
+    <span class="button_text">Add</span>
+  </button>
+
+</div>
